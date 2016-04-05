@@ -4,6 +4,14 @@
 </head>
 <body>
   <style>
+    .footer {
+      padding-top:10px;
+      max-width:800px;
+      border-top:1px solid #000;
+      margin:0 auto;
+      margin-top:10px;
+      text-align:center;
+    }
     .content {
       margin:0 auto;
       max-width:800px;
@@ -18,11 +26,11 @@
       max-width:300px; 
     }
     .option_list {
-      background-color:#5F4BB6;
+      background-color:#235281;
       height:100px;
     }
     .active_li {
-      background-color:#7960EA!important;
+      background-color:#3f6f81!important;
     }
     .header_links {
       color:white!important;
@@ -51,12 +59,25 @@
         float:left;
         max-width:450px;
       }
+      .poverty_carousel img {
+        max-width:400px;
+        max-height:200px;
+        overflow:hidden;
+      }
+    }
+    .poverty_carousel {
+      margin:0 auto;
+    }
+    .poverty_carousel img {
+      width:800px;
+      height:300px;
+      overflow:hidden;
     }
   </style>
   <div class="content">
       <img class="logo_top" src="cadeaux_logo.png"/>
   </div>
-  <div class="navbar navbar-default navbar-static-top"  style="background-color:#5F4BB6;border-color:#5F4BB6;" role="navigation">
+  <div class="navbar navbar-default navbar-static-top"  style="background-color:#235281;border-color:#235281;" role="navigation">
       <p class="header_wrapper">
         <div class="content">
                 <ul class="nav navbar-nav" >
@@ -71,6 +92,40 @@
     </div>
   </div>
   <div class="container-fluid content_body">
+    <div class="poverty_carousel">
+      <img src="pretty_stable_wide.png"; />
+      <!--<img style="display:none" src="field_wide.png" />-->
+      <img style="display:none" src="riding_wide.png" />
+      <img style="display:none" src="jump_wide.png" />
+    </div>
+    <script>
+      var next=0;
+      setInterval(
+        function(){
+          var p =document.getElementsByClassName("poverty_carousel")[0]
+          var n = p.children.length;
+          p.children[next].style.display="none";
+          next = (next+1)%n;
+          p.children[next].style.display="block";
+        }, 5000);
+    </script>
+    <h2>
+      Cadeaux Show Stables
+    </h2>
+    <div class="lead">
+      Cadeaux Show Stables is the premier show stable of Charlottesville, Virginia. Operated by <a href="about_me.html">Zach Parks</a>, Cadeaux has a proven track record of success.
+    </div>
+    <h2>
+      About The Name
+    </h2>
+    <div class="lead">
+       Cadeaux was the 2007 National Champion Small Junior Hunter ridden by Zach. More importantly though, "cadeaux" is French for "gift". As we reflect back on the events, we are humbled and touched by the outpouring of generosity and support that has been shown to us by the horse community, our clients, our families, and our friends.
+    </div>
+  </div>
+  <div class="footer">
+    <h4>Cadeaux Show Stables</h4>
+    1097 St. John Road Keswick, Virginia 22947
+
   </div>
 </body>
 </html>
